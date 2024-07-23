@@ -51,12 +51,12 @@ class MPUSensor:
         self.yaw += (gyroZ - self.gyroZBias) * self.dt
         return self.yaw
     
-    def test(self,forNumber):
-        for i in range(forNumber):
-            print("Roll");
-            print(self.getRoll);
-            print("Pitch");
-            print(self.getPitch);
-            print("Yaw");
-            print(self.getYaw);
+    def test(self):
+
+        print("Roll");
+        print(self.getRoll);
+        print("Pitch");
+        print(self.getPitch);
+        print("Yaw");
+        print(self.getYaw);
         

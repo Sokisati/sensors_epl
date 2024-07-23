@@ -54,6 +54,7 @@ class SensorPack:
 sensorPack = SensorPack();
 
 while True:
-    sensorPack.updateSensorDataPack();
-    sensorPack.printDataPack();
+    #sensorPack.updateSensorDataPack();
+    #sensorPack.printDataPack();
+    sensorPack.test();
     time.sleep(1);
