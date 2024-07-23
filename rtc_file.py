@@ -26,4 +26,8 @@ class RTCSensor:
             current_time.tm_sec
         )
         return formatted_time
+    
+    def test(self):
+        time = self.getDateAndTime();
+        print(time);
 
