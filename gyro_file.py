@@ -54,9 +54,9 @@ class MPUSensor:
     def test(self):
 
         print("Roll");
-        print(self.getRoll);
+        print(self.getRoll());
         print("Pitch");
-        print(self.getPitch);
+        print(self.getPitch());
         print("Yaw");
-        print(self.getYaw);
+        print(self.getYaw());
         
