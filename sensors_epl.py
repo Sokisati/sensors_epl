@@ -2,7 +2,7 @@ from gyro_file import MPUSensor
 from barometric_file import BMESensor
 from rtc_file import RTCSensor
 from gps_file import GPSSensor
-
+import time
     
 class SensorDataPack:
     def __init__(self):
@@ -18,7 +18,6 @@ class SensorDataPack:
         self.yaw = 0;
         self.dateAndTime = '1/1/2038-00/00/00'
         
-
 class SensorPack:
     
     def __init__(self):
@@ -50,3 +49,11 @@ class SensorPack:
         print(f"Pitch: {self.sensorDataPack.pitch}")
         print(f"Yaw: {self.sensorDataPack.yaw}")
         print(f"Date and Time: {self.sensorDataPack.dateAndTime}")
+        
+
+sensorPack = SensorPack();
+
+while True:
+    sensorPack.updateSensorDataPack();
+    sensorPack.printDataPack();
+    time.sleep(1);
