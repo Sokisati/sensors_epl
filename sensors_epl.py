@@ -23,13 +23,18 @@ class SensorPack:
     def __init__(self):
         self.bme = BMESensor();
         self.gyro = MPUSensor();
+        self.gps = GPSSensor();
         self.sensorDataPack = SensorDataPack();
     
     def test(self):
         self.bme.test();
         self.gyro.test();
+        self.gps.test();
 
     def updateSensorDataPack(self):
+        self.sensorDataPack.lat = self.gps.getLat();
+        self.sensorDataPack.long = self.gps.getLong();
+        self.sensorDataPack.alt = self.gps.getAlt();
         self.sensorDataPack.roll = self.gyro.getRoll();
         self.sensorDataPack.pitch = self.gyro.getPitch();
         self.sensorDataPack.yaw = self.gyro.getYaw();
